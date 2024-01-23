@@ -33,7 +33,7 @@ const Navbar = () => {
         />
 
         <h1 className={styles.titleText}>
-          Taste <span className={styles.textEats}>Hub</span>
+          Taste <span className={styles.textRed}>Hub</span>
         </h1>
         <div className={styles.deliveryOptions}>
           <p className={styles.option1}>Delivery</p>
@@ -53,63 +53,61 @@ const Navbar = () => {
       </button>
 
       {/* Mobile Menu */}
-      {sideNavIsOpen && (
-        <>
-          {/* Overlay */}
-          <div className={`${styles.mobileView} `} />
 
-          {/* Side Drawer */}
-          <div
-            className={`${styles.sideDrawer} ${
-              sideNavIsOpen ? styles.open : ""
-            }`}
-          >
-            <RiCloseLine
-              size={30}
-              className={styles.closeIcon}
-              onClick={handleSideNavClick}
-            />
-            <h2>
-              Taste <span>Hub</span>
-            </h2>
-            <nav className={styles.sideNavigation}>
-              <ul>
-                <li>
-                  <RiTruckLine color="#cb4154" className={styles.icon} />
-                  Orders
-                </li>
-                <li>
-                  <RiHeartFill color="#cb4154" className={styles.icon} />
-                  Favorites
-                </li>
-                <li>
-                  <RiWalletFill color="#cb4154" className={styles.icon} />
-                  Wallet
-                </li>
-                <li>
-                  <RiQuestionFill color="#cb4154" className={styles.icon} />
-                  Help
-                </li>
-                <li>
-                  <RiPriceTag3Fill color="#cb4154" className={styles.icon} />
-                  Promotions
-                </li>
-                <li>
-                  <RiArrowDownCircleFill
-                    color="#cb4154"
-                    className={styles.icon}
-                  />
-                  Best One
-                </li>
-                <li>
-                  <RiGroupFill color="#cb4154" className={styles.icon} />
-                  Invite Friends
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </>
-      )}
+      <>
+        {/* Overlay */}
+        <div
+          className={`${sideNavIsOpen ? styles.mobileView : styles.noDisplay}`}
+        />
+        {/* Side Drawer */}
+        <div
+          className={`${styles.sideDrawer} ${sideNavIsOpen ? styles.open : ""}`}
+        >
+          <RiCloseLine
+            size={30}
+            className={styles.closeIcon}
+            onClick={handleSideNavClick}
+          />
+          <h2>
+            Taste <span>Hub</span>
+          </h2>
+          <nav className={styles.sideNavigation}>
+            <ul>
+              <li>
+                <RiTruckLine color="#cb4154" className={styles.icon} />
+                Orders
+              </li>
+              <li>
+                <RiHeartFill color="#cb4154" className={styles.icon} />
+                Favorites
+              </li>
+              <li>
+                <RiWalletFill color="#cb4154" className={styles.icon} />
+                Wallet
+              </li>
+              <li>
+                <RiQuestionFill color="#cb4154" className={styles.icon} />
+                Help
+              </li>
+              <li>
+                <RiPriceTag3Fill color="#cb4154" className={styles.icon} />
+                Promotions
+              </li>
+              <li>
+                <RiArrowDownCircleFill
+                  color="#cb4154"
+                  className={styles.icon}
+                />
+                Best One
+              </li>
+              <li>
+                <RiGroupFill color="#cb4154" className={styles.icon} />
+                Invite Friends
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </>
     </div>
   );
 };
