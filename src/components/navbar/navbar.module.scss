@@ -38,6 +38,7 @@
     }
 
     .deliveryOptions {
+      cursor: pointer;
       padding: 0 5px;
       display: none; // Equivalent to hidden
 
@@ -149,6 +150,7 @@
         font-weight: 400;
         margin: 0;
         li {
+          cursor: pointer;
           font-size: 1.25rem; // Equivalent to text-xl
           padding-top: 2px; // Equivalent to py-4
           padding-bottom: 2px; // Equivalent to py-4
