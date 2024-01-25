@@ -1,4 +1,7 @@
-import HeadlineCards from "./components/headling-cards/headling-cards";
+import styles from "../src/App.module.scss";
+import Foods from "./components/foods/foods";
+
+import HeadLineCards from "./components/headLine-cards/headLine-cards";
 import Hero from "./components/hero/hero";
 import Navbar from "./components/navbar/navbar";
 
@@ -7,7 +10,8 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <HeadlineCards />
+      <HeadLineCards />
+      <Foods />
     </div>
   );
 }

@@ -1,0 +1,80 @@
+.container {
+  max-width: 1540px; // Equivalent to max-w-[1640px]
+  max-height: 250px;
+  margin-left: auto; // Equivalent to mx-auto
+  margin-right: auto; // Equivalent to mx-auto
+  padding: 1rem; // Equivalent to p-4
+  padding-top: 3rem; // Equivalent to py-12
+  padding-bottom: 3rem; // Equivalent to py-12
+  display: grid; // Equivalent to grid
+  grid-template-columns: repeat(1, minmax(0, 1fr)); // Default for small screens
+  gap: 1rem;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(
+      3,
+      minmax(0, 1fr)
+    ); // 3 columns for md screens
+    gap: 1.5rem; // Equivalent to gap-6
+  }
+
+  .cards {
+    position: relative;
+    border-radius: 20px;
+
+    .overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%; // Equivalent to w-full
+      height: 100%; // Equivalent to h-full
+      background-color: rgba(0, 0, 0, 0.5); // Equivalent to bg-black/50
+      border-radius: 1rem; // Equivalent to rounded-xl
+      color: white; // Equivalent to text-white
+
+      p:first-child {
+        font-weight: bold; // Equivalent to font-bold
+        font-size: 20px; // Equivalent to text-2xl
+        padding-left: 0.5rem; // Equivalent to px-2
+        padding-top: 1rem; // Equivalent to pt-4
+        margin: 0;
+      }
+      p:nth-child(2) {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-top: 0;
+      }
+      button {
+        border: 1px solid white; // Equivalent to border-white
+        background-color: rgb(255, 255, 255); // Equivalent to bg-white
+        color: black; // Equivalent to text-black
+        margin-left: auto; // Equivalent to mx-auto
+        margin-right: auto; // Equivalent to mx-auto
+        position: absolute;
+        bottom: 1rem;
+      }
+      button:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(255, 243, 243, 0.475);
+      }
+      .heartIcon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  img {
+    max-height: 160px; // Equivalent to max-h-[160px]
+    width: 100%; // Equivalent to w-full
+    object-fit: cover; // Equivalent to object-cover
+    border-radius: 1rem; // Equivalent to rounded-xl
+
+    @media (min-width: 768px) {
+      max-height: 200px; // Equivalent to md:max-h-[200px]
+    }
+  }
+}

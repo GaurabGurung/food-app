@@ -36,8 +36,8 @@ const Navbar = () => {
           Taste <span className={styles.textRed}>Hub</span>
         </h1>
         <div className={styles.deliveryOptions}>
-          <p className={styles.option1}>Delivery</p>
-          <p className={styles.option2}>Pickup</p>
+          <span className={styles.option1}>Delivery</span>
+          <span className={styles.option2}>Pickup</span>
         </div>
       </div>
 
@@ -72,7 +72,7 @@ const Navbar = () => {
             Taste <span>Hub</span>
           </h2>
           <nav className={styles.sideNavigation}>
-            <ul>
+            <ul onClick={handleSideNavClick}>
               <li>
                 <RiTruckLine color="#cb4154" className={styles.icon} />
                 Orders

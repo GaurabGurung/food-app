@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "../hero/hero.module.scss";
+import cover from "../../assets/cover.png";
+
 const Hero = () => {
   return (
     <div className={styles.container}>
@@ -12,10 +14,7 @@ const Hero = () => {
             <span>Foods </span>Delivered
           </h2>
         </div>
-        <img
-          src="https://images.pexels.com/photos/2725744/pexels-photo-2725744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          alt=""
-        />
+        <img src={cover} alt="" />
       </div>
     </div>
   );
