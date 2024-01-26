@@ -1,4 +1,5 @@
 import styles from "../src/App.module.scss";
+import Category from "./components/category/category";
 import Foods from "./components/foods/foods";
 
 import HeadLineCards from "./components/headLine-cards/headLine-cards";
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <HeadLineCards />
       <Foods />
+      <Category />
     </div>
   );
 }

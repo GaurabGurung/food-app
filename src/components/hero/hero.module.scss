@@ -24,7 +24,7 @@
       width: 100%;
       height: 100%;
       max-height: 500px;
-      background-color: rgba(0, 0, 0, 0.217);
+      background-color: rgba(0, 0, 0, 0.241);
       z-index: 0;
       display: flex;
       flex-direction: column;
@@ -54,14 +54,40 @@
         }
       }
     }
-    img {
+    .imageAnimation {
       width: 100%;
       height: 500px;
-      object-fit: cover;
-      object-position: top left;
-      @media (max-width: 640px) {
-        object-position: top;
-      }
+      background-image: url("../../assets/cover.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      // background-position: center;
+      animation: slide 25s steps(1) infinite;
     }
+  }
+}
+@keyframes slide {
+  0% {
+    background-image: url("https://images.pexels.com/photos/15086642/pexels-photo-15086642/free-photo-of-set-of-sushi-and-sashimi-on-board.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: left;
+  }
+  20% {
+    background-image: url("https://images.pexels.com/photos/7786562/pexels-photo-7786562.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+  }
+  40% {
+    background-image: url("https://images.pexels.com/photos/2673353/pexels-photo-2673353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: left;
+  }
+  60% {
+    background-image: url("https://images.pexels.com/photos/14943653/pexels-photo-14943653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+  }
+  80% {
+    background-image: url("../../assets/cover.png");
+    background-position: top left;
+  }
+  100% {
+    background-image: url("../../assets/cover.png");
+    background-position: top left;
   }
 }

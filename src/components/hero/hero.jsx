@@ -14,7 +14,7 @@ const Hero = () => {
             <span>Foods </span>Delivered
           </h2>
         </div>
-        <img src={cover} alt="" />
+        <div className={styles.imageAnimation} />
       </div>
     </div>
   );

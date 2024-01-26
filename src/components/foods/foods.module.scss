@@ -1,5 +1,6 @@
 .container {
   max-width: 1540px;
+  height: 100%;
   margin-right: auto;
   margin-left: auto;
   padding: 1rem;
@@ -19,6 +20,29 @@
     @media (min-width: 1024px) {
       flex-direction: row;
       justify-content: space-between;
+    }
+    div {
+      p {
+        font-weight: bold;
+        color: #4a5568;
+      }
+
+      .foodFilters {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        button {
+          border: 1px solid #dd6b20;
+          color: #dd6b20;
+
+          &:hover {
+            background-color: #dd6b20;
+            color: white;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }
