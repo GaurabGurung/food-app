@@ -94,6 +94,9 @@
     @media (min-width: 768px) {
       display: flex; // Equivalent to md::flex
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .mobileView {
